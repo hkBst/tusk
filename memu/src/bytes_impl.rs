@@ -247,7 +247,7 @@ macro_rules! data_impl {
             /// Returns a string containing`self.as_u64()` and `Self::UNIT`.
             #[cfg(feature = "units")]
             pub fn as_string_with_unit(&self) -> String {
-                format!("{:.}{}", self.as_f64(), Self::UNIT)
+                format!("{}{}", self.as_f64(), Self::UNIT)
             }
 
             /// Returns a string containing `self.as_f64()` with the given precision and `Self::UNIT`.
